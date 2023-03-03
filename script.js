@@ -34,7 +34,7 @@ calResult.addEventListener('click', function() {
         hProtein.innerText = 'N%'
         return false
     }
-    if (tempValue != '') {
+    if (temp.value != '') {
         temp.style.border = '2px solid #888';
         if (tempUnitValue == 'celsius') {
             t = (tempValue * (9 / 5)) + 32 //  converting censius to fahrenheit
@@ -53,10 +53,10 @@ calResult.addEventListener('click', function() {
         hProtein.innerText = '8%-11%'
         if (wetValue == 'no') {
             additionalCal = Math.round(45 - t)
-            hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)} - ${((weightValue*0.042)+ ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)}`
+            hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)} - ${((weightValue*0.042)+ ((weightValue * 0.042)*(additionalCal/100))).toFixed(2)}`
         } else {
             additionalCal = Math.round(55 - t)
-            hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)} - ${((weightValue*0.042)+ ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)}`
+            hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)} - ${((weightValue*0.042)+ ((weightValue * 0.042)*(additionalCal/100))).toFixed(2)}`
         }
     }
     if (ageValue > 20 && ageValue <= 30) {
