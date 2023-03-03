@@ -52,22 +52,40 @@ calResult.addEventListener('click', function() {
         hAge.innerText = ageValue
         hProtein.innerText = '8%-11%'
         if (wetValue == 'no') {
-            additionalCal = Math.round(45 - t)
-            hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)} - ${((weightValue*0.042)+ ((weightValue * 0.042)*(additionalCal/100))).toFixed(2)}`
+            if (t < 45) {
+                additionalCal = Math.round(45 - t)
+                hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)} - ${((weightValue*0.042)+ ((weightValue * 0.042)*(additionalCal/100))).toFixed(2)}`
+            } else {
+                hMCAL.innerText = `${((weightValue * 0.033)).toFixed(2)} - ${((weightValue*0.042)).toFixed(2)}`
+            }
+
         } else {
-            additionalCal = Math.round(55 - t)
-            hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)} - ${((weightValue*0.042)+ ((weightValue * 0.042)*(additionalCal/100))).toFixed(2)}`
+            if (t < 55) {
+                additionalCal = Math.round(55 - t)
+                hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)} - ${((weightValue*0.042)+ ((weightValue * 0.042)*(additionalCal/100))).toFixed(2)}`
+            } else {
+                hMCAL.innerText = `${((weightValue * 0.033)).toFixed(2)} - ${((weightValue*0.042)).toFixed(2)}`
+            }
         }
     }
     if (ageValue > 20 && ageValue <= 30) {
         hAge.innerText = ageValue
         hProtein.innerText = '14%'
         if (wetValue == 'no') {
-            additionalCal = Math.round(45 - t)
-            hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)}`
+            if (t < 45) {
+                additionalCal = Math.round(45 - t)
+                hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)}`
+            } else {
+                hMCAL.innerText = `${((weightValue * 0.033)).toFixed(2)}`
+            }
+
         } else {
-            additionalCal = Math.round(55 - t)
-            hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)}`
+            if (t < 55) {
+                additionalCal = Math.round(55 - t)
+                hMCAL.innerText = `${((weightValue * 0.033) + ((weightValue * 0.033)*(additionalCal/100))).toFixed(2)}`
+            } else {
+                hMCAL.innerText = `${((weightValue * 0.033)).toFixed(2)}`
+            }
         }
     }
 
