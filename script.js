@@ -38,10 +38,10 @@ calResult.addEventListener('click', function() {
         temp.style.border = '2px solid #888';
         if (tempUnitValue == 'celsius') {
             t = (tempValue * (9 / 5)) + 32 //  converting censius to fahrenheit
-            hTemp.innerText = tempValue + ' celsius'
+            hTemp.innerText = tempValue + '°C'
         } else {
             t = tempValue
-            hTemp.innerText = tempValue + ' Fahrenheit'
+            hTemp.innerText = tempValue + '°F'
         }
     } else {
         alert('Enter Temperature Value!')
